@@ -8,9 +8,13 @@ jobs:
     steps:
       - name: Checkout from repo
         uses: actions/checkout@v3.1.0
+      - name: Print node version
+        run: node -v
+      - name: Upgrade node-sass version
+        run: yarn add node-sass
       - name: Install dependencies
         run: npm install
-      - name: Run Linter
-        run: npm run lint
-      - name: Prettify code
-        run: npm run prettier
+      # - name: Run Linter
+      #   run: npm run lint
+      # - name: Prettify code
+      #   run: npm run prettier
