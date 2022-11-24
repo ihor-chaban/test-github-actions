@@ -8,7 +8,9 @@ jobs:
     steps:
       - name: Checkout from repo
         uses: actions/checkout@v3.1.0
-      - name: Print current branch
-        run: git rev-parse --abbrev-ref HEAD
-      - name: Print current commit hash
-        run: git rev-parse --short HEAD
+      - name: Install dependencies
+        run: npm install
+      - name: Run Linter
+        run: npm run lint
+      - name: Prettify code
+        run: npm run prettier
