@@ -1,6 +1,6 @@
 name: npm
 
-on: pull-request
+on: pull_request
 
 jobs:
   npm:
