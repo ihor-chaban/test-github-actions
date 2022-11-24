@@ -14,6 +14,8 @@ jobs:
         run: yarn add node-sass
       - name: Install dependencies
         run: npm install
+      - name: Install prettier
+        run: npm install --save-dev --save-exact prettier
       - name: Run Linter
         run: npm run lint
       - name: Prettify code
